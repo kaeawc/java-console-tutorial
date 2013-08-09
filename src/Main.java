@@ -14,13 +14,15 @@ public class Main {
 
     System.out.println(prompt);
 
+    loop();
+
   }
 
   public static void loop() {
 
     while(!new Scanner(System.in).nextLine().equals("n")) {
 
-      System.out.println("Doing something...");
+      doSomething();
 
       System.out.println(prompt);
 
@@ -28,5 +30,9 @@ public class Main {
 
   }
 
+  public static void doSomething() {
 
+    System.out.println("Doing something...");
+
+  }
 }
