@@ -4,6 +4,10 @@ public class Main {
 
   private static String prompt = "Do you want to do something? (y/n)";
 
+  /**
+   * Main method for this Java console application.
+   * @param args
+   */
   public static void main(String[] args) {
 
     StringBuilder list = new StringBuilder();
@@ -16,6 +20,9 @@ public class Main {
 
   }
 
+  /**
+   * Loop to evaluate user input and then either keep working or stop the program.
+   */
   public static void loop() {
 
     while(getYesNo()) {
@@ -26,6 +33,10 @@ public class Main {
 
   }
 
+  /**
+   * Prompts the user for input (y/n)
+   * @return
+   */
   public static Boolean getYesNo() {
 
     System.out.println(prompt);
@@ -40,6 +51,9 @@ public class Main {
     return false;
   }
 
+  /**
+   * Work method of the program
+   */
   public static void doSomething() {
 
     System.out.println("Doing something...");
