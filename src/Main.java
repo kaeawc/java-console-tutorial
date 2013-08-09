@@ -12,22 +12,32 @@ public class Main {
 
     System.out.printf("Here are my args: %s", list.toString());
 
-    System.out.println(prompt);
-
     loop();
 
   }
 
   public static void loop() {
 
-    while(!new Scanner(System.in).nextLine().equals("n")) {
+    while(getYesNo()) {
 
       doSomething();
 
-      System.out.println(prompt);
-
     }
 
+  }
+
+  public static Boolean getYesNo() {
+
+    System.out.println(prompt);
+
+    String input = new Scanner(System.in).nextLine();
+
+    if(input.toLowerCase() == "n")
+      return false;
+    else if(input.toLowerCase() == "y")
+      return true;
+
+    return false;
   }
 
   public static void doSomething() {
